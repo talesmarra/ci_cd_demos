@@ -1,3 +1,5 @@
+install:
+	pip install pipenv
 sync:
 	pipenv sync
 lock:
