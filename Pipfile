@@ -5,4 +5,5 @@ verify_ssl = true
 
 [packages]
 pytest = "*"
+pylint = "*"
 importlib-metadata = "<2"
