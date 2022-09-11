@@ -5,7 +5,7 @@ sync:
 lock:
 	pipenv lock
 lint:
-	pylint main.py
+	pipenv run pylint main.py
 test:
 	pipenv run pytest tests
 shell:
