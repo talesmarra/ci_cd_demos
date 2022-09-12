@@ -37,6 +37,8 @@ jobs:
       - name: build wheel
         run: make wheel
 
+      # This action performs the uploading of the artifact to Github
       - uses: actions/upload-artifact@v3
         with:
+          name: pkg_wheel
           path: dist/*.tar.gz
