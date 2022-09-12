@@ -33,3 +33,9 @@ jobs:
 
       - name: make test
         run: make test
+
+      - name:
+        run: make build_wheel
+      - uses: actions/upload-artifact@v3
+          with:
+            path: dist/*.tar.gz

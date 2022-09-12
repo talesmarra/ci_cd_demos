@@ -10,3 +10,5 @@ test:
 	pipenv run pytest tests
 shell:
 	pipenv shell
+build_wheel:
+	python setup.py sdist

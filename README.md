@@ -1,1 +1,1 @@
-# ci_cd
+# CI/CD example repository
