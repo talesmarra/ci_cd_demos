@@ -33,6 +33,9 @@ involved in launching automated tests on the code base. We prepare the environme
 updates to packages; then we check for syntax errors etc. using lint and finally we launch our unit tests with
 pytest.
 
+The result you obtain when clicking over the Actions button is like the following:
+![ci](https://user-images.githubusercontent.com/46964784/189722255-62ecd6b1-e637-4f6b-ae70-41a6d4820383.png)
+
 
 ## CD 
 
@@ -46,3 +49,4 @@ The example for this is in `.github/workflows/deploy.yml`, where we only stored 
 but you can deploy it to any Artifactory you desire;
 
 The end result can be seen below:
+![deploy_workflow](https://user-images.githubusercontent.com/46964784/189721742-9ed1738f-803b-4c24-b53a-1b230e87949e.png)
