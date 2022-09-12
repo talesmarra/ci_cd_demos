@@ -17,16 +17,9 @@ for each developer branch, making sure that the integrity of that codebase is ma
 
 To be able to launch those tests, you'll need the proper base. 
 
-Quickly saying, a basic python project needs at least those:
+Quickly saying, a basic python project structure would look like this:
 
-(Note) Python Repository Structure
-
-- Makefile: reusable commands
-- Pipfile and Pipfile.lock - required packages
-- setup.py - wheel creation (not mandatory)
-- README.md - this is for every project
-- .py files
-- unit tests for .py files
+<img src="https://user-images.githubusercontent.com/46964784/189723386-f79bc032-fb9d-45ed-a5f7-36a8d129031d.png" width="600" height="400" align="center" />
 
 Once this structure is set, you can move to the `.github/workflows/workflow.yml` and see the different steps
 involved in launching automated tests on the code base. We prepare the environment by doing installation and eventual
@@ -35,7 +28,6 @@ pytest.
 
 The result you obtain when clicking over the Actions button is like the following:
 ![ci](https://user-images.githubusercontent.com/46964784/189722255-62ecd6b1-e637-4f6b-ae70-41a6d4820383.png)
-
 
 ## CD 
 
