@@ -31,6 +31,3 @@ jobs:
 
       - name: make test
         run: make test
-
-      - name: build wheel
-        run: make wheel
