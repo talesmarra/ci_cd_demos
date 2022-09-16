@@ -13,4 +13,4 @@ def add(first: float, second: float):
 
 
 if __name__ == '__main__':
-    add(2, 3)
+    print(add(2, 3))
