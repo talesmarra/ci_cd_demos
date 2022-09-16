@@ -45,3 +45,4 @@ jobs:
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/myimage:latest
           cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/myimage:buildcache
           cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/myimage:buildcache,mode=max
+          cache: "enabled"
