@@ -27,7 +27,7 @@ jobs:
           name: pkg_wheel
           path: dist/*.tar.gz
 
-  deploy_docker_image:
+  deploy_docker_image_to_hub:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
