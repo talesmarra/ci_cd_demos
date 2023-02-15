@@ -23,3 +23,5 @@ elif args.operator == '/':
 else:
     print("Invalid operator. Please use +, -, *, or /.")
     exit()
+
+print(f"Result of {args.num1} {args.operator} {args.num2}: {result}")
