@@ -1,4 +1,8 @@
+"""
+main module
+"""
 import argparse
+import sys
 
 # Create the argument parser
 parser = argparse.ArgumentParser(description='A simple command-line calculator.')
@@ -22,6 +26,6 @@ elif args.operator == '/':
     result = args.num1 / args.num2
 else:
     print("Invalid operator. Please use +, -, *, or /.")
-    exit()
+    sys.exit()
 
 print(f"Result of {args.num1} {args.operator} {args.num2}: {result}")
