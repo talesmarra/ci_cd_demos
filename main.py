@@ -1,16 +1,25 @@
-"""
-Main module
-"""
+import argparse
 
+# Create the argument parser
+parser = argparse.ArgumentParser(description='A simple command-line calculator.')
 
-def add(first: float, second: float):
-    """
-    :param first: first number to be summed
-    :param second: second number to be summed
-    :return: sum
-    """
-    return first + second
+# Define the positional arguments
+parser.add_argument('num1', type=float, help='The first number.')
+parser.add_argument('num2', type=float, help='The second number.')
+parser.add_argument('operator', type=str, help='The operator (+, -, *, /).')
 
+# Parse the arguments
+args = parser.parse_args()
 
-if __name__ == '__main__':
-    print(add(2, 3))
+# Perform the calculation based on the operator
+if args.operator == '+':
+    result = args.num1 + args.num2
+elif args.operator == '-':
+    result = args.num1 - args.num2
+elif args.operator == '*':
+    result = args.num1 * args.num2
+elif args.operator == '/':
+    result = args.num1 / args.num2
+else:
+    print("Invalid operator. Please use +, -, *, or /.")
+    exit()
