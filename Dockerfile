@@ -1,19 +1,13 @@
-FROM python:3.7
+FROM python:3.7-alpine
 
-WORKDIR /home
+WORKDIR /home 
 
-COPY ./Pipfile Pipfile
+COPY ./Pipfile Pipfile.lock main.py ./
 
-COPY ./Pipfile.lock Pipfile.lock
-
-COPY ./main.py main.py
+COPY ./module/ module/
 
 RUN pip install pipenv
 
-RUN pipenv run pip freeze > requirements.txt
+RUN pipenv install --system
 
-RUN pip3 install -r requirements.txt
-
-ENTRYPOINT [ "python" ]
-
-CMD [ "main.py" ]
+ENTRYPOINT [ "python", "main.py"]
