@@ -40,5 +40,3 @@ instance.
 The example for this is in `.github/workflows/deploy.yml`, where we only stored the generated wheel as an artifact in Git,
 but you can deploy it to any Artifactory you desire; we also deploy a docker image to Docker Hub;
 
-The end result can be seen below:
-![image](https://user-images.githubusercontent.com/46964784/190871770-539f774d-845f-41b4-a9ea-a8ee393531bf.png)
