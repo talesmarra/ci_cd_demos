@@ -3,9 +3,9 @@ Define operations
 """
 from typing import Union
 
-number = Union[int, float]
+Number = Union[int, float]
 
-def add(first: number, second: number) -> number:
+def add(first: Number, second: Number) -> Number:
     """
     :param first: first number to be summed
     :param second: second number to be summed
@@ -13,7 +13,7 @@ def add(first: number, second: number) -> number:
     """
     return first + second
 
-def subtract(first: number, second: number) -> number:
+def subtract(first: Number, second: Number) -> Number:
     """
     :param first: first number
     :param second: second number
@@ -21,7 +21,7 @@ def subtract(first: number, second: number) -> number:
     """
     return first - second
 
-def multiply(first: number, second: number) -> number:
+def multiply(first: Number, second: Number) -> Number:
     """
     :param first: first number
     :param second: second number
@@ -32,11 +32,11 @@ def multiply(first: number, second: number) -> number:
     if not (isinstance(first, float) and isinstance(second, float)):
         try:
             first = float(first)
-        except TypeError:
-            raise TypeError('Numbers should be float')
+        except TypeError as exc:
+            raise TypeError('Numbers should be float') from exc
     return first * second
 
-def divide(first: number, second: number) -> number:
+def divide(first: Number, second: Number) -> Number:
     """
     :param first: first number
     :param second: second number

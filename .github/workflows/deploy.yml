@@ -2,8 +2,8 @@ name: deploy
 
 # Controls when the workflow will run
 on:
-  release:
-    types: [published]
+  push:
+    branches: [ "master" ]
 
   workflow_dispatch:
 
