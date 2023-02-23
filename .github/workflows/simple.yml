@@ -16,6 +16,5 @@ jobs:
     steps:
       - name: simple step
         run: echo "Hello Github Actions!"
-      - name: use secret
-        run: echo ${{ secrets.MY_NAME }}
+
 
