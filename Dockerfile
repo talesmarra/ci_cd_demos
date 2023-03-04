@@ -1,13 +1,17 @@
-FROM python:3.7-alpine
+FROM public.ecr.aws/lambda/python:3.7
 
 WORKDIR /home 
 
-COPY ./Pipfile Pipfile.lock main.py ./
+COPY Pipfile.lock .
 
-COPY ./module/ module/
+ENV TRANSFORMERS_CACHE=/tmp
 
 RUN pip install pipenv
 
-RUN pipenv install --system
+RUN pipenv requirements > requirements.txt
 
-ENTRYPOINT [ "python", "main.py"]
+COPY main_ml.py ${LAMBDA_TASK_ROOT}
+
+RUN  pip3 install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
+
+CMD [ "main_ml.lambda_handler" ]
