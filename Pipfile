@@ -7,3 +7,5 @@ verify_ssl = true
 pytest = "*"
 pylint = "*"
 importlib-metadata = "<2"
+transformers = "*"
+tensorflow = "*"
