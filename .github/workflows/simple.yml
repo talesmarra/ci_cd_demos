@@ -17,4 +17,6 @@ jobs:
       - name: simple step
         run: echo "Hello Github Actions!"
 
+      - name: install pipenv
+        run: pip3 install pipenv
 
